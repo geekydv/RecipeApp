@@ -2,10 +2,11 @@ import React,{useEffect,useState} from 'react'
 import './App.css';
 import Recipe from './components/Recipe';
 
-function App() {
 
-  const APP_ID='36585070';
-  const APP_KEY='593d5112519c62154c35e733ce4fa3d2';
+const{REACT_APP_ID,REACT_APP_KEY} = process.env;
+
+
+function App() {
   
   const [recipes,setRecipes] = useState([]);
   const [timeoutId,updateTimeoutId] = useState();
@@ -16,7 +17,7 @@ function App() {
   },[search]);
 
   const getRecipes = () =>{
-    fetch(`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`).then(res=>res.json()).then(data =>setRecipes(data.hits));
+    fetch(`https://api.edamam.com/search?q=${search}&app_id=${REACT_APP_ID}&app_key=${REACT_APP_KEY}`).then(res=>res.json()).then(data =>setRecipes(data.hits));
     document.querySelector(".search-bar").blur();
   }
 

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+
+
+.App {
+  min-height:100vh ;
+  background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+}
+
+body{
+  margin:0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:25px;
+}
+
+.header{
+  margin:0;  
+  display: flex;
+  justify-content:center;
+}
+.heading{
+  margin:0;  
+}
+h1{
+  font-family: 'Licorice', cursive;
+  font-size:80px;
+}
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.search-bar{
+  width: 50%;
+  border: none;
+  padding:10px;
+
+}
+
+.search-button{
+  background:lightcoral;
+  border: none;
+  padding:10px 20px;
+  color: white;
+}
+
+.recipes{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
